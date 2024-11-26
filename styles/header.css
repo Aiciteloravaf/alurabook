@@ -1,0 +1,136 @@
+.cabeçalho_meu-hamburguer {
+
+width: 24px;
+height: 24px;
+background-image: url("../img/Menu,svg");
+display: inline-block;
+background-repeat: no-repeat;
+background-position: center;
+position: relative;
+}
+
+.container__botao::checked ~ .container__rotulo {
+    background: purple;
+}
+
+.cabeçalho {
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container_imagem {
+    padding: 1em;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+
+.container_botao:checked ~ .lista-menu {
+display: block;
+}
+
+.lista-menu_titulo, 
+.lista-menu_item {
+padding: 1em;
+background-color: deeppink;
+}
+
+.lista-menu_titulo {
+    color: var(--laranja_);
+}
+
+.lista-menu_link {
+background: var( --azul-degrade);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-transform: uppercase;
+}
+
+.container_botao {
+    display: none;
+}
+
+.container_titulo{
+    display: none;
+}
+
+.container__texto {
+    display: none;
+}
+
+@media screen and (min-width:1024px) {
+    .container__titulo {
+        font-family: var(--fonte-secundário);
+        font-size: 30px;
+    }
+}
+
+.container__titulo {
+    font-weight: 400;
+    display: block;
+}
+
+@media screen and (min-width:1728px) {
+    .container__link{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+    }
+
+    .cabeçalho {
+        padding: 0 2em;
+    }
+
+    .opções {
+        margin-right: auto; 
+    }
+
+    .container__texto{
+        display: block;
+    }
+
+    .opções__botão:checked ~ .opções_rotulo>.opções__item{
+        background: var(--azul-degrade);
+        color: pink;
+    }
+
+    .opções__item {
+        padding: 2em 1.2em;
+    }
+
+    .lista-menu_item:hover {
+        background: var(--azul-degrade);
+    }
+
+    .lista-menu_item:hover > .lista-menu__link {
+        -webkit-text-fill-color: pink;
+        text-decoration: none;
+    }
+}
+    
+    @media screen and (min-width: 1728px) {
+        .banner__pesquisa {
+            width: 38%;
+        }
+
+        .banner__pesquisa::placeholder {
+            background-position: 9em;
+        }
+
+        .banner {
+            padding: 6em;
+        }
+    }
